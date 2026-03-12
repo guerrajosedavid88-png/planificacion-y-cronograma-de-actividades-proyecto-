@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planificación de Proyecto - ISO 14001 UPTZ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9;
+            color: #334155;
+        }
+
+        /* Navbar Profesional */
+        .navbar-uptz {
+            background-color: #ffffff;
+            border-bottom: 3px solid #004a99;
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .nav-logo { height: 60px; width: auto; }
+        .nav-title {
+            color: #004a99;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #004a99 0%, #002d5e 100%);
+            color: white;
+            padding: 40px 0;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+
+        .section-header {
+            color: #004a99;
+            border-left: 6px solid #ffcc00;
+            padding-left: 15px;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        /* Tabla de Acción */
+        .table-custom thead {
+            background-color: #0f172a;
+            color: white;
+        }
+        .table-custom th { font-size: 0.85rem; text-transform: uppercase; padding: 15px; }
+        .table-custom td { padding: 15px; font-size: 0.95rem; }
+
+        /* Ajustes para Android / Mobile Gantt */
+        .gantt-container {
+            width: 100%;
+            overflow-x: auto; 
+            background: white;
+            border-radius: 8px;
+            padding: 10px;
+            -webkit-overflow-scrolling: touch; 
+        }
+
+        .mermaid {
+            min-width: 800px; /* Evita que el diagrama se comprima en móviles */
+            display: block;
+            margin: 0 auto;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+        }
+
+        /* Botón Aesthetic */
+        .btn-next-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .btn-aesthetic {
+            background-color: #004a99;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 74, 153, 0.3);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .btn-aesthetic:hover {
+            background-color: #002d5e;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 74, 153, 0.4);
+            color: white;
+        }
+
+        .footer-info {
+            font-size: 0.85rem;
+            color: #64748b;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-uptz">
+    <div class="container d-flex justify-content-between align-items-center">
+        <img src="Logo UPTZ-01.png" alt="Logo UPTZ" class="nav-logo">
+        <div class="text-center d-none d-md-block">
+            <div class="nav-title">PNF Sistemas de Calidad y Ambiente</div>
+            <small class="text-muted">Investigación y Tecnologías Emergentes</small>
+        </div>
+        <img src="iso.jfif" alt="Logo ISO 14001" class="nav-logo">
+    </div>
+</nav>
+
+<header class="hero-section text-center">
+    <div class="container">
+        <h2 class="fw-bold">Aplicación Interactiva SGA ISO 14001:2015</h2>
+        <p class="opacity-75">Plan de Acción y Cronograma de Actividades - Proyecto Socio-Integrador</p>
+    </div>
+</header>
+
+<div class="container">
+    
+    <h4 class="section-header">Plan de Acción Estratégico</h4>
+    <div class="card">
+        <div class="table-responsive">
+            <table class="table table-hover table-custom mb-0">
+                <thead>
+                    <tr>
+                        <th>Objetivo Específico</th>
+                        <th>Actividades Clave</th>
+                        <th>Recursos</th>
+                        <th>Duración</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. Diagnosticar</strong> trazabilidad y estandarización.</td>
+                        <td>Entrevistas, encuestas de madurez digital y análisis FODA.</td>
+                        <td>Guías, registros del SGA, software de encuestas.</td>
+                        <td><span class="badge bg-secondary">4 Semanas</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Desarrollar</strong> Módulo Full-Stack.</td>
+                        <td>Arquitectura SQL, diseño UX/UI y listas de chequeo digitales.</td>
+                        <td>IDEs, servidores, frameworks de desarrollo móvil.</td>
+                        <td><span class="badge bg-secondary">12 Semanas</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Capacitar</strong> personal y estudiantes.</td>
+                        <td>Talleres prácticos y manuales técnicos de operación.</td>
+                        <td>Laboratorios UPTZ, guías didácticas.</td>
+                        <td><span class="badge bg-secondary">4 Semanas</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. Implementar</strong> KPIs y Alertas.</td>
+                        <td>Programación de Dashboard y alertas automáticas de cumplimiento.</td>
+                        <td>Librerías de datos, sistemas de notificación.</td>
+                        <td><span class="badge bg-secondary">4 Semanas</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <h4 class="section-header">Cronograma de Actividades (Diagrama de Gantt)</h4>
+    <div class="card">
+        <div class="card-body p-2"> 
+            <div class="gantt-container">
+                <div class="mermaid">
+                    gantt
+                        title Ejecución del Proyecto UPTZ
+                        dateFormat  YYYY-MM-DD
+                        axisFormat  %b %d
+                        
+                        section Diagnóstico
+                        Investigación :active, a1, 2026-04-01, 28d
+                        
+                        section Desarrollo
+                        Base de Datos  :crit, b1, after a1, 21d
+                        Programación   :b2, after b1, 45d
+                        Carga Listas   :b3, after b2, 18d
+                        
+                        section Capacitación
+                        Talleres Lab   :c1, after b3, 28d
+                        
+                        section Control
+                        KPIs Finales   :d1, after c1, 28d
+                </div>
+            </div>
+            <div class="text-center mt-2 d-md-none">
+                <small class="text-muted"><i class="bi bi-arrow-left-right"></i> Desliza para ver el cronograma completo</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-info">
+        <strong>Autores:</strong> José D. Guerra, Edwin Salcedo, Edward Ollarves, José Ro.<br>
+        <strong>Tutoras:</strong> Ing. María E. Rodríguez U. / MSc. María A. Rodríguez.<br>
+        Cabimas, Estado Zulia - 2026
+    </div>
+
+    <div class="btn-next-container">
+        <a href="autores_evaluacion_uno.html" class="btn-aesthetic">
+            Siguiente Página <i class="bi bi-arrow-right-short ms-2"></i>
+        </a>
+    </div>
+</div>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ 
+        startOnLoad: true,
+        theme: 'neutral',
+        securityLevel: 'loose',
+        themeVariables: {
+            primaryColor: '#004a99',
+            primaryTextColor: '#fff',
+            secondaryColor: '#ffcc00',
+            tertiaryColor: '#f1f5f9'
+        },
+        gantt: {
+            barHeight: 30,
+            fontSize: 16,
+            sectionFontSize: 14,
+            gridLineStartPadding: 20,
+            useWidth: 1000,
+        }
+    });
+</script>
+
+</body>
+</html>
